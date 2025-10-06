@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LassanaGarden Solutions - Premium Landscaping & Garden Decoration Services in Sri Lanka | Thalawathugoda,
+        Hokandara, Colombo</title>
+    <meta name="description"
+        content="Transform your outdoor space with LassanaGarden Solutions. Professional landscaping, garden design, and decoration services in Thalawathugoda, Hokandara, Colombo and across Sri Lanka. Expert garden makeovers, lawn care, and landscape architecture.">
+    <meta name="keywords"
+        content="landscaping Sri Lanka, garden design Thalawathugoda, landscaping Hokandara, garden decoration Colombo, lawn care Sri Lanka, landscape architecture, garden makeover, outdoor design, plant nursery, irrigation systems, garden maintenance">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Ubuntu:wght@300;400;500;700&family=Alice&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="animation.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 20px;
+            /* Add top margin */
+            left: 50%;
+            transform: translateX(-50%);
+            /* Center horizontally */
+            width: calc(100% - 40px);
+            /* Leave margins on sides */
+            max-width: 1200px;
+            /* Limit maximum width */
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            /* Curved corners */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            /* Optional: subtle border */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 2rem 2rem; */
+            /* Increase horizontal padding */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4a7c59;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #2d5a27;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d5a27;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #4a7c59;
+        }
+
+        .logo:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('images/iher2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(45, 90, 39, 0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #4a7c59, #66bb6a);
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(74, 124, 89, 0.6);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d5a27;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, #4a7c59, #66bb6a);
+            border-radius: 2px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: #f8f9fa;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(45, 90, 39, 0.8), rgba(74, 124, 89, 0.8));
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            color: white;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        /* Our Work Section */
+        .our-work {
+            background: white;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .work-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .work-card-content {
+            padding: 2rem;
+        }
+
+        .work-card h3 {
+            color: #2d5a27;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .work-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products {
+            background: #f8f9fa;
+        }
+
+        .products-grid {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+            grid-template-columns: repeat(3, 1fr);
+            /* exactly 3 columns */
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            color: #2d5a27;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 300%;
+        }
+
+        .testimonial-slide {
+            width: 33.333%;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: #4a7c59;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            font-family: serif;
+
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #555;
+            line-height: 1.8;
+            padding-top: 10px;
+        }
+
+        .testimonial-author {
+            color: #2d5a27;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-location {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .testimonial-nav {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .testimonial-nav button {
+            background: #e0e0e0;
+            border: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .testimonial-nav button.active {
+            background: #4a7c59;
+        }
+
+        /* See More Buttons */
+        .see-more-btn {
+            display: block;
+            margin: 2rem auto 0;
+            background: linear-gradient(45deg, #4a7c59, #66bb6a);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .see-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 124, 89, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #2d5a27;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #66bb6a;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #66bb6a;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #4a7c59;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #66bb6a;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #4a7c59;
+            color: #aaa;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: left 0.3s;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .testimonial-slide {
+                padding: 0 1rem;
+            }
+
+            .testimonial-card {
+                padding: 2rem 1rem;
+            }
+
+            .testimonial-text {
+                padding-top: 50px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .logo img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* Base hidden state */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        /* When in view */
+        .reveal.show {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        /* Direction variations */
+        .fade-left {
+            transform: translateX(-80px);
+        }
+
+        .fade-right {
+            transform: translateX(80px);
+        }
+
+        .fade-up {
+            transform: translateY(50px);
+        }
+
+        .fade-down {
+            transform: translateY(-50px);
+        }
+
+        /* Stagger for groups */
+        .stagger>* {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .stagger.show>* {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                max-width: none;
+                transform: none;
+                border-radius: 0;
+                border: none;
+            }
+
+            nav {
+                padding: 1rem 20px;
+                /* Reset padding for mobile */
+            }
+        }
+
+        /* Desktop header adjustment */
+        @media (min-width: 1025px) {
+            nav {
+                padding: 0.6rem 1.5rem;
+                /* reduce top/bottom padding */
+            }
+
+            .logo img {
+                width: 35px;
+                /* shrink logo image */
+                height: 35px;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                /* optional: reduce font size */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="max-w-6xl mx-auto px-4">
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="">
+                LassanaGarden
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="gallery/index.html">Gallery</a></li>
+                <!-- <li><a href="#work">Our Work</a></li> -->
+                <li><a href="product/index.html">Products</a></li>
+                <li><a href="services/index.html" class="active">Services</a></li>
+                <!-- <li><a href="#testimonials">Reviews</a></li> -->
+                <li><a href="contact-us/index.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-family: 'Anta', sans-serif;">Lassana<span style="color: yellow;">
+                        Garden Solutions</span></h1>
+                <p
+                    style="background-color: rgba(224, 224, 224, 0.5);border-radius: 5px;padding: 10px;color: black;font-family: 'Ubuntu', sans-serif;">
+                    Professional landscaping and garden decoration services across Sri Lanka.
+                    From Thalawathugoda to Colombo, we create stunning outdoor spaces that bring nature to your
+                    doorstep.
+                </p>
+
+
+                <a href="https://wa.me/94777392964" class="cta-button">
+                    <i class="fas fa-phone"></i> Get Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-white py-16 px-6 lg:px-20">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Image -->
+            <div class="relative reveal fade-left">
+                <img src="images/test.jpg" alt="About Landscaping"
+                    class="rounded-2xl shadow-lg object-cover w-full h-80">
+                <div class="absolute -bottom-6 -left-6 bg-green-600 text-white px-6 py-4 rounded-xl shadow-lg">
+                    <span class="font-bold text-2xl counter" data-target="10">0</span>+
+                    <p class="text-sm">Years Experience</p>
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div>
+                <h2 class="text-3xl font-bold text-black mb-6 reveal fade-right">
+                    About <span class="text-green-600">LassanaGarden Solutions</span>
+                </h2>
+
+                <p class="text-gray-600 mb-4 reveal fade-up">
+                    We are a professional landscaping and garden decoration company based in
+                    <span class="font-semibold">Thalawathugoda</span>, serving clients all across
+                    <span class="font-semibold">Sri Lanka</span>, especially in <span
+                        class="font-semibold">Hokandara</span>
+                    and <span class="font-semibold">Colombo</span>.
+                </p>
+                <p class="text-gray-600 mb-6 reveal fade-up">
+                    Our team specializes in creating eco-friendly and sustainable outdoor designs
+                    that bring beauty, functionality, and harmony to your space. Whether it’s garden
+                    decoration, landscaping, or maintenance, we make your dream garden a reality.
+                </p>
+
+                <!-- Features -->
+                <div class="grid sm:grid-cols-2 gap-4 mb-6 reveal stagger">
+                    <div class="flex items-center"><i class="fas fa-leaf text-green-600 text-xl mr-3"></i><span
+                            class="text-gray-700">Eco-friendly Designs</span></div>
+                    <div class="flex items-center"><i class="fas fa-tree text-green-600 text-xl mr-3"></i><span
+                            class="text-gray-700">Garden Decoration</span></div>
+                    <div class="flex items-center"><i class="fas fa-seedling text-green-600 text-xl mr-3"></i><span
+                            class="text-gray-700">Plant Supply</span></div>
+                    <div class="flex items-center"><i class="fas fa-home text-green-600 text-xl mr-3"></i><span
+                            class="text-gray-700">Residential & Commercial</span></div>
+                </div>
+
+                <!-- Button -->
+                <a href="services/index.html"
+                    class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition reveal stagger">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-br from-gray-100 to-gray-200"
+        style="background-image: url(images/galbg.png);background-repeat: no-repeat;background-size: cover;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Garden Gallery</h2>
+
+            <!-- 3D Curved Slider Container -->
+            <div class="relative h-96 flex items-center justify-center overflow-hidden" style="perspective: 1200px;">
+                <div id="gallery-slider" class="relative w-full h-80 flex items-center justify-center"
+                    style="transform-style: preserve-3d;">
+
+                    <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                        style="transform-style: preserve-3d;">
+                        <img src="images/g1.jpg" alt="Modern Garden Design" class="w-full h-2/3 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <h3 class="text-white text-lg font-semibold">Indoor Plants</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                        style="transform-style: preserve-3d;">
+                        <img src="images/g2.jpg" alt="Tropical Landscaping" class="w-full h-2/3 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <h3 class="text-white text-lg font-semibold">Thalawathugoda branch</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                        style="transform-style: preserve-3d;">
+                        <img src="images/g3.jpg" alt="Water Feature Design" class="w-full h-2/3 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <h3 class="text-white text-lg font-semibold">Swimming pool design</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                        style="transform-style: preserve-3d;">
+                        <img src="images/g4.jpg" alt="Garden Pathways" class="w-full h-2/3 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <h3 class="text-white text-lg font-semibold">Block paving</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                        style="transform-style: preserve-3d;">
+                        <img src="images/g5.jpg" alt="Flower Garden Design" class="w-full h-2/3 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <h3 class="text-white text-lg font-semibold">Interior Design & Decor</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                        style="transform-style: preserve-3d;">
+                        <img src="images/g6.jpg" alt="Lawn Care Services" class="w-full h-2/3 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <h3 class="text-white text-lg font-semibold">Artificial Green Carpet</h3>
+                        </div>
+                    </div>
+                
+
+                <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                    style="transform-style: preserve-3d;">
+                    <img src="images/g7.jpg" alt="Lawn Care Services" class="w-full h-2/3 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <h3 class="text-white text-lg font-semibold">Outdoor Living Space Design</h3>
+                    </div>
+                </div>
+            
+
+            <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+                style="transform-style: preserve-3d;">
+                <img src="images/g8.jpg" alt="Lawn Care Services" class="w-full h-2/3 object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <h3 class="text-white text-lg font-semibold">Outdoor Living Space Design</h3>
+                </div>
+            </div>
+        
+
+        <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+            style="transform-style: preserve-3d;">
+            <img src="images/g9.jpg" alt="Lawn Care Services" class="w-full h-2/3 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-white text-lg font-semibold">Interior Design & Decor</h3>
+            </div>
+        </div>
+        
+
+        <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+            style="transform-style: preserve-3d;">
+            <img src="images/g10.jpg" alt="Lawn Care Services" class="w-full h-2/3 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-white text-lg font-semibold">Interior Design & Decor</h3>
+            </div>
+        </div>
+       
+
+        <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+            style="transform-style: preserve-3d;">
+            <img src="images/g11.jpg" alt="Lawn Care Services" class="w-full h-2/3 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-white text-lg font-semibold">Interior Design & Decor</h3>
+            </div>
+        </div>
+       
+
+        <div class="gallery-item absolute w-72 h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-700 bg-white"
+            style="transform-style: preserve-3d;">
+            <img src="images/g12.jpg" alt="Lawn Care Services" class="w-full h-2/3 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-white text-lg font-semibold">Indoor Plants</h3>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="prevSlide"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center z-10 transition-all duration-300 hover:scale-110">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                </path>
+            </svg>
+        </button>
+
+        <button id="nextSlide"
+            class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center z-10 transition-all duration-300 hover:scale-110">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        </div>
+        <!-- View More Button -->
+        <div class="text-center mt-12">
+            <a href="#" class="see-more-btn">View More Gallery</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="work" class="our-work">
+        <div class="container">
+            <!-- <h2 class="section-title">Our Recent Projects</h2> -->
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Recent Projects</h2>
+            <div class="work-grid">
+                <div class="work-card fade-in">
+                    <img src="images/project5.jpg" alt="Residential Garden Thalawathugoda">
+                    <div class="work-card-content">
+                        <h3>Luxury Villa Garden - Thalawathugoda</h3>
+                        <p>Complete garden transformation featuring tropical plants, water features, and modern
+                            hardscaping. This 2-acre property now boasts a stunning landscape that perfectly complements
+                            the contemporary architecture.</p>
+                    </div>
+                </div>
+                <div class="work-card fade-in">
+                    <img src="images/project6.jpg" alt="Commercial Landscaping Colombo">
+                    <div class="work-card-content">
+                        <h3>Corporate Office Landscaping - Colombo</h3>
+                        <p>Professional commercial landscaping project including maintenance-free plant selections,
+                            automated irrigation system, and eco-friendly design elements for a leading business
+                            complex.</p>
+                    </div>
+                </div>
+                <div class="work-card fade-in">
+                    <img src="images/project2.jpg" alt="Garden Makeover Hokandara">
+                    <div class="work-card-content">
+                        <h3>Traditional Garden Makeover - Hokandara</h3>
+                        <p>Heritage garden restoration combining traditional Sri Lankan garden elements with modern
+                            functionality. Features indigenous plants and sustainable water management systems.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="gallery/index.html" class="see-more-btn">See All Projects</a>
+        </div>
+    </section>
+
+    <!-- Products/Services Section -->
+    <section id="products" class="products"
+        style=" background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('images/art4.jpg');">
+        <div class="container">
+            <!-- <h2 class="section-title">Our Services</h2> -->
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Services</h2>
+
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Garden Design</h3>
+                    <p>Custom garden designs tailored to your space, climate, and preferences. From concept to
+                        completion, we create outdoor spaces that reflect your vision.</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Landscaping</h3>
+                    <p>Complete landscaping solutions including hardscaping, plant installation, and terrain
+                        modification. Transform any outdoor space into a beautiful landscape.</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Irrigation Systems</h3>
+                    <p>Smart irrigation systems designed for water efficiency and plant health. Automated solutions that
+                        ensure your garden stays beautiful year-round.</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Garden Maintenance</h3>
+                    <p>Regular maintenance services including pruning, fertilizing, pest control, and seasonal care to
+                        keep your garden looking its absolute best.</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Water Features</h3>
+                    <p>Custom water features including fountains, ponds, and waterfalls. Add the soothing sound of water
+                        to create a tranquil outdoor environment.</p>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Garden Lighting</h3>
+                    <p>Professional outdoor lighting design to highlight your landscape's beauty and provide safety and
+                        security for evening enjoyment of your garden.</p>
+                </div>
+            </div>
+            <a href="services/index.html" class="see-more-btn">View All Services</a>
+        </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section id="stats" class="bg-green-50 py-16 px-6 lg:px-20">
+        <div class="max-w-6xl mx-auto grid sm:grid-cols-3 gap-8 text-center">
+
+            <!-- Happy Customers -->
+            <div class="bg-white shadow-lg rounded-2xl p-8">
+                <i class="fas fa-smile text-green-600 text-4xl mb-4"></i>
+                <h3 class="text-4xl font-bold text-black counter" data-target="500">0</h3>
+                <p class="text-gray-600 mt-2">Happy Customers</p>
+            </div>
+
+            <!-- Projects Completed -->
+            <div class="bg-white shadow-lg rounded-2xl p-8">
+                <i class="fas fa-seedling text-green-600 text-4xl mb-4"></i>
+                <h3 class="text-4xl font-bold text-black counter" data-target="120">0</h3>
+                <p class="text-gray-600 mt-2">Projects Completed</p>
+            </div>
+
+            <!-- Years of Experience -->
+            <div class="bg-white shadow-lg rounded-2xl p-8">
+                <i class="fas fa-calendar-check text-green-600 text-4xl mb-4"></i>
+                <h3 class="text-4xl font-bold text-black counter" data-target="10">0</h3>
+                <p class="text-gray-600 mt-2">Years of Experience</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Products Section -->
+    <section id="products" class="bg-gray-50 py-16 px-6 lg:px-20">
+        <div class="max-w-6xl mx-auto text-center">
+            <!-- <h2 class="section-title">Our Products</h2> -->
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Products</h2>
+
+            <!-- Product Wrapper -->
+            <div class="relative overflow-hidden px-4 md:px-0">
+
+                <!-- Carousel/Grid -->
+                <div id="product-carousel"
+                    class="flex transition-transform duration-500 ease-in-out md:grid md:grid-cols-3 md:gap-8 mb-6">
+
+                    <!-- Product Card 1 -->
+                    <div class="min-w-full md:min-w-0 bg-white rounded-2xl shadow hover:shadow-2xl transition md:mx-0">
+                        <img src="https://thepotstory.lk/wp-content/uploads/2021/06/DPMP.png.webp"
+                            class="rounded-t-2xl w-full h-56 object-contain" alt="Garden Stones">
+                        <div class="p-6 text-left">
+                            <h3 class="text-lg font-semibold text-black mb-2">Garden Stones</h3>
+                            <p class="text-gray-600 text-sm mb-3">Premium decorative stones for your outdoor space.</p>
+                            <!-- <p class="text-green-600 font-bold text-lg mb-4">$25.00</p> -->
+                            <div class="flex gap-3">
+                                <button
+                                    class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Buy
+                                    Now</button>
+                                <!-- <button class="flex-1 bg-black text-white py-2 rounded-lg hover:bg-green-600 hover:text-black transition">Buy Now</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="min-w-full md:min-w-0 bg-white rounded-2xl shadow hover:shadow-2xl transition md:mx-0">
+                        <img src="https://thepotstory.lk/wp-content/uploads/2021/06/DPRS-330x330.png.webp"
+                            class="rounded-t-2xl w-full h-56 object-contain" alt="Garden Stones">
+                        <div class="p-6 text-left">
+                            <h3 class="text-lg font-semibold text-black mb-2">Garden Stones</h3>
+                            <p class="text-gray-600 text-sm mb-3">Premium decorative stones for your outdoor space.</p>
+                            <!-- <p class="text-green-600 font-bold text-lg mb-4">$25.00</p> -->
+                            <div class="flex gap-3">
+                                <button
+                                    class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Buy
+                                    Now</button>
+                                <!-- <button class="flex-1 bg-black text-white py-2 rounded-lg hover:bg-green-600 hover:text-black transition">Buy Now</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="min-w-full md:min-w-0 bg-white rounded-2xl shadow hover:shadow-2xl transition md:mx-0">
+                        <img src="https://thepotstory.lk/wp-content/uploads/2021/06/DPTRZCHP-330x330.png.webp"
+                            class="rounded-t-2xl w-full h-56 object-contain" alt="Garden Stones">
+                        <div class="p-6 text-left">
+                            <h3 class="text-lg font-semibold text-black mb-2">Garden Stones</h3>
+                            <p class="text-gray-600 text-sm mb-3">Premium decorative stones for your outdoor space.</p>
+                            <!-- <p class="text-green-600 font-bold text-lg mb-4">$25.00</p> -->
+                            <div class="flex gap-3">
+                                <button
+                                    class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Buy
+                                    Now</button>
+                                <!-- <button class="flex-1 bg-black text-white py-2 rounded-lg hover:bg-green-600 hover:text-black transition">Buy Now</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 1 -->
+                    <div class="min-w-full md:min-w-0 bg-white rounded-2xl shadow hover:shadow-2xl transition md:mx-0">
+                        <img src="https://thepotstory.lk/wp-content/uploads/2024/10/Untitled-design-1-330x330.jpg"
+                            class="rounded-t-2xl w-full h-56 object-contain" alt="Garden Stones">
+                        <div class="p-6 text-left">
+                            <h3 class="text-lg font-semibold text-black mb-2">Ceramic Pots</h3>
+                            <p class="text-gray-600 text-sm mb-3">Ceramic pots are clean and smart for display</p>
+                            <!-- <p class="text-green-600 font-bold text-lg mb-4">$25.00</p> -->
+                            <div class="flex gap-3">
+                                <button
+                                    class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Buy
+                                    Now</button>
+                                <!-- <button class="flex-1 bg-black text-white py-2 rounded-lg hover:bg-green-600 hover:text-black transition">Buy Now</button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="min-w-full md:min-w-0 bg-white rounded-2xl shadow hover:shadow-2xl transition md:mx-0">
+                        <img src="images/products/73.jpg"
+                            class="rounded-t-2xl w-full h-56 object-contain" alt="Outdoor Plants">
+                        <div class="p-6 text-left">
+                            <h3 class="text-lg font-semibold text-black mb-2">Outdoor Plants</h3>
+                            <p class="text-gray-600 text-sm mb-3">Fresh and healthy plants to enhance your garden.</p>
+                            <!-- <p class="text-green-600 font-bold text-lg mb-4">$18.00</p> -->
+                            <div class="flex gap-3">
+                                <button
+                                    class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Buy
+                                    Now</button>
+                                <!-- <button class="flex-1 bg-black text-white py-2 rounded-lg hover:bg-green-600 hover:text-black transition">Buy Now</button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="min-w-full md:min-w-0 bg-white rounded-2xl shadow hover:shadow-2xl transition md:mx-0">
+                        <img src="https://thepotstory.lk/wp-content/uploads/2021/06/2101004-1000X1000webimage-330x330.jpg.webp"
+                            class="rounded-t-2xl w-full h-56 object-contain" alt="Garden Lights">
+                        <div class="p-6 text-left">
+                            <h3 class="text-lg font-semibold text-black mb-2">Ceramic Pots</h3>
+                            <p class="text-gray-600 text-sm mb-3">Ceramic pots are clean and smart for display</p>
+                            <!-- <p class="text-green-600 font-bold text-lg mb-4">$35.00</p> -->
+                            <div class="flex gap-3">
+                                <button
+                                    class="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Buy
+                                    Now</button>
+                                <!-- <button class="flex-1 bg-black text-white py-2 rounded-lg hover:bg-green-600 hover:text-black transition">Buy Now</button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Mobile Controls -->
+                <div class="flex justify-between mt-6 md:hidden">
+                    <button id="prevProduct"
+                        class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="nextProduct"
+                        class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- See More -->
+            <div class="mt-10">
+                <a href="product/index.html" class="see-more-btn">More Products</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <!-- <h2 class="section-title">What Our Clients Say</h2> -->
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">LassanaGarden Solutions transformed our backyard into a tropical
+                            paradise. Their attention to detail and use of native plants created a sustainable,
+                            beautiful space that we enjoy every day. Highly recommended for anyone in the Thalawathugoda
+                            area!</p>
+                        <div class="testimonial-author">Priya Rathnayake</div>
+                        <div class="testimonial-location">Thalawathugoda</div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Professional, punctual, and creative! The team delivered exactly
+                            what we envisioned for our commercial property. The landscaping has received countless
+                            compliments from our clients and has truly enhanced our business image.</p>
+                        <div class="testimonial-author">Chaminda Silva</div>
+                        <div class="testimonial-location">Colombo 07</div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">From design consultation to final installation, the service was
+                            exceptional. They understood our budget constraints and delivered a stunning garden makeover
+                            that exceeded our expectations. The maintenance service keeps everything perfect.</p>
+                        <div class="testimonial-author">Nimal & Kumari Perera</div>
+                        <div class="testimonial-location">Hokandara</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button class="nav-dot active" data-slide="0"></button>
+                <button class="nav-dot" data-slide="1"></button>
+                <button class="nav-dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact-footer">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-leaf"></i> LassanaGarden Solutions</h3>
+                    <p>Transform your outdoor space with Sri Lanka's premier landscaping and garden decoration
+                        specialists. Serving Thalawathugoda, Hokandara, Colombo, and across the island.</p>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/lassanagardenservices/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/94777392964"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <p><a href="#">Garden Design & Planning</a></p>
+                    <p><a href="#">Landscape Architecture</a></p>
+                    <p><a href="#">Irrigation & Water Features</a></p>
+                    <p><a href="#">Garden Maintenance</a></p>
+                    <p><a href="#">Plant Nursery</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Service Areas</h3>
+                    <p>Thalawathugoda</p>
+                    <p>Hokandara</p>
+                    <p>Colombo & Suburbs</p>
+                    <p>Mount Lavinia</p>
+                    <p>All Sri Lanka</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +94 77 739 2964</p>
+                    <p><i class="fas fa-envelope"></i> lassanagarden@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Thalawathugoda, Sri Lanka</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 8.30AM-6.30PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LassanaGarden Solutions. All rights reserved. | Landscaping Sri Lanka | Garden Design
+                    Thalawathugoda | Professional Landscaping Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Testimonial slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.nav-dot');
+        const slider = document.querySelector('.testimonial-slider');
+
+        function showSlide(index) {
+            slider.style.transform = `translateX(-${index * 33.333}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Auto-slide testimonials
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 25px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Gallery hover effects
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+
+            item.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Contact form handling (placeholder)
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add any contact form handling here
+            console.log('Lassanagarden Solutions website loaded successfully!');
+        });
+
+        // Performance optimization - lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('product-carousel');
+            const prevBtn = document.getElementById('prevProduct');
+            const nextBtn = document.getElementById('nextProduct');
+            if (!carousel) return;
+
+            const slides = Array.from(carousel.children);
+            const total = slides.length;
+            let index = 0;
+
+            // Ensure smooth transition
+            carousel.style.transition = 'transform 0.5s ease-in-out';
+
+            // Update transform (use percent so we don't depend on measured widths)
+            function update() {
+                if (window.innerWidth < 768) {
+                    carousel.style.transform = `translateX(-${index * 100}%)`;
+                } else {
+                    // On md+ we want the grid to behave normally; reset transform
+                    carousel.style.transform = 'translateX(0)';
+                }
+            }
+
+            // Looping handlers
+            if (nextBtn) nextBtn.addEventListener('click', () => {
+                index = (index + 1) % total;
+                update();
+            });
+
+            if (prevBtn) prevBtn.addEventListener('click', () => {
+                index = (index - 1 + total) % total;
+                update();
+            });
+
+            // Handle window resize: reset transform on desktop and re-apply on mobile
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    index = 0;
+                    // temporarily disable transition to avoid jump effect
+                    carousel.style.transition = 'none';
+                    carousel.style.transform = 'translateX(0)';
+                    requestAnimationFrame(() => {
+                        carousel.style.transition = 'transform 0.5s ease-in-out';
+                    });
+                } else {
+                    update();
+                }
+            });
+
+            // Optional: autoplay on mobile (comment out startAutoplay() if you don't want it)
+            const AUTOPLAY = true;
+            const AUTOPLAY_DELAY = 4000;
+            let timer = null;
+
+            function startAutoplay() {
+                if (!AUTOPLAY || window.innerWidth >= 768) return;
+                stopAutoplay();
+                timer = setInterval(() => {
+                    index = (index + 1) % total;
+                    update();
+                }, AUTOPLAY_DELAY);
+            }
+            function stopAutoplay() { if (timer) { clearInterval(timer); timer = null; } }
+
+            // Pause on hover / touch
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', startAutoplay);
+            carousel.addEventListener('touchstart', stopAutoplay);
+            carousel.addEventListener('touchend', startAutoplay);
+
+            // Kick things off
+            update();
+            startAutoplay();
+        });
+    </script>
+
+    <!-- 3D Curved Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('gallery-slider');
+            const slides = Array.from(slider.querySelectorAll('.gallery-item'));
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            let currentIndex = 0;
+
+            function updateSlides() {
+                slides.forEach((slide, i) => {
+                    const offset = i - currentIndex;
+                    const absOffset = Math.abs(offset);
+
+                    // Z-index for proper layering
+                    slide.style.zIndex = slides.length - absOffset;
+
+                    // 3D curved positioning
+                    if (offset === 0) {
+                        // Center slide
+                        slide.style.transform = `
+                    perspective(1000px)
+                    translateX(0px)
+                    translateZ(100px)
+                    rotateY(0deg)
+                    scale(1)
+                `;
+                        slide.style.opacity = '1';
+                        slide.style.filter = 'brightness(1)';
+                    } else {
+                        // Side slides with curved effect
+                        const direction = offset > 0 ? 1 : -1;
+                        const distance = Math.min(absOffset, 3);
+
+                        slide.style.transform = `
+                    perspective(1000px)
+                    translateX(${direction * (150 + (distance - 1) * 80)}px)
+                    translateZ(${-distance * 100}px)
+                    rotateY(${-direction * (25 + (distance - 1) * 15)}deg)
+                    scale(${Math.max(0.6, 1 - (distance - 1) * 0.15)})
+                `;
+
+                        slide.style.opacity = distance > 2 ? '0' : `${1 - (distance - 1) * 0.3}`;
+                        slide.style.filter = `brightness(${1 - (distance - 1) * 0.2})`;
+                    }
+                });
+            }
+
+            // Navigation functions
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlides();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlides();
+            });
+
+            // Click on slide to center it
+            slides.forEach((slide, index) => {
+                slide.addEventListener('click', () => {
+                    if (index !== currentIndex) {
+                        currentIndex = index;
+                        updateSlides();
+                    }
+                });
+            });
+
+            // Auto-play (optional)
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlides();
+            }, 5000);
+
+            // Initialize
+            updateSlides();
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
